@@ -1,34 +1,21 @@
-import './First_page.css';
+import "./First_page.css";
 import React, { useState } from "react";
 import Fakenews from "../../Images/FN.jpeg";
+import { useNavigate } from "react-router-dom";
 import Cyberbullying from "../../Images/CB_1.jpeg";
 import { getComments, getPosts } from "./First_page_service";
 
-
 function First_page() {
-  const [commentsData, setCommentsData] = useState([]);
-  const [postData, setPostData] = useState([]);
+  const navigate = useNavigate();
 
-  const retrive_comments = async () => {
-    try {
-      const commentsData = await getComments();
-      console.log(commentsData);
-    } catch (error) {
-      console.log(error);
-    }
+  const handleCyberbullyingClick = () => {
+    // Navigate to the cyberbullying page
+    navigate("/cyberbullying");
   };
 
-  const retrive_posts = async () => {
-    try {
-      const postData = await getPosts();
-      postData.map((post, index) => {
-        console.log("post", post);
-        console.log("index", index);
-      });
-      // console.log(postData);
-    } catch (error) {
-      console.log(error);
-    }
+  const handleFakeNewsClick = () => {
+    // Navigate to the fake news page
+    navigate("/fake-news");
   };
 
   return (
@@ -54,7 +41,9 @@ function First_page() {
               proactive measures to combat and protect individuals from online
               abuse.
             </p>
-            <button class="button is-primary">Check It</button>
+            <button class="button is-info" onClick={handleCyberbullyingClick}>
+              Check It
+            </button>
           </div>
         </div>
       </div>
@@ -74,7 +63,9 @@ function First_page() {
               and content creators to uphold the integrity of information
               dissemination.
             </p>
-            <button class="button is-primary">Check It</button>
+            <button class="button is-info" onClick={handleFakeNewsClick}>
+              Check It
+            </button>
           </div>
           <div>
             <img src={Fakenews} alt="Left Side Image" />

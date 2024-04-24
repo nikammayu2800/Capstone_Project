@@ -8,12 +8,17 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "bulma": "^1.0.0",
+    "csv-parse": "^5.5.5",
     "flask": "^0.2.10",
     "flask-cors": "^0.0.1",
+    "franc": "^6.2.0",
     "ndb": "^1.1.5",
+    "pandas": "^0.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "scikit-learn": "^0.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

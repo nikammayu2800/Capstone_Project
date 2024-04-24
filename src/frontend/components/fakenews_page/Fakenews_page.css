@@ -1,0 +1,40 @@
+.clear-button {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.clear-button:hover {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+/* App.css */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.title {
+    font-size: 40px !important;
+}
+
+.real {
+    color: green !important;
+}
+
+.fake {
+    color: red !important;
+}
+
+.animated {
+    animation: pulse 1s infinite;
+}
